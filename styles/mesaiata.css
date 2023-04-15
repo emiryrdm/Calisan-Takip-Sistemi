@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+
+
+
+:root{
+    --bodybg: #edf1fd;
+    --first-color: #0C5DF4;
+    --bg-color: #12192C;
+}
+::-webkit-scrollbar {
+    width:5px;
+    height: 4px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--bg-color);
+    border-radius: 10px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+::selection{
+    background: var(--bg-color);
+    color:#fff;
+}
+body{
+    min-height: 120vh;
+    background: var(--bodybg) !important;
+    min-width: 320px;
+    font-family: 'Poppins', sans-serif;
+}
+.sidebar{
+    position: fixed;
+    z-index:99999;
+    display: inline-block;
+    width: 270px;
+    background-color: var(--bg-color);
+    height: 100vh;
+    padding: 0 12px ;
+    overflow: hidden;
+    overflow-y: scroll;
+    transition: width .5s ;
+}
+.sidebar input{
+    display: none;
+}
+#side{
+    display: none;
+}
+.sidebar .check{
+    position: relative;
+    height: 60px;
+    transition: width .5s ;
+    z-index: 1;
+    color: #fff;
+    width: 255px;
+    display: flex;
+    align-items: center;
+}
+.sidebar ion-icon{
+    font-size: 25px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 8px;
+    transition: all .3s;
+}
+.sidebar .check label ion-icon{
+    transform: rotate(180deg);
+    transition: all .5s;
+}
+.sidebar .check label ion-icon:hover{
+    background-color: var(--first-color);
+}
+.sidebar .check label{
+    color: #fff;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.sidebar .check span{
+    font-size: 27px;
+    font-family: 'Allura', cursive;
+    padding: 10px ;
+}
+.sidebar .link{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 245px;
+    font-size: 14px;
+    margin: 10px 0;
+    border-radius: 8px ;
+    color:  #fff;
+    transition: all .2s;
+    cursor: pointer;
+    text-decoration: none;
+}
+.sidebar .link #name{
+    padding-left: 10px;
+}
+.sidebar .link span ion-icon{
+    position: absolute;
+    right: 10px;
+    transition: background-color .3s;
+    top:2px;
+    font-size: 20px;
+}
+.sidebar .link:hover{
+    text-decoration: none;
+    background-color: var(--first-color);
+}
+.drop{
+    width: 100%;
+    position: relative;
+}
+.drop{
+    list-style: none;
+    padding: 5px 15px;
+    background-color: var(--first-color);
+    border-radius: 8px;
+    display: none;
+    width: 245px;
+}
+.drop .drop-link{
+    display: block;
+    font-size: 14px;
+    color: #dadae1;
+    margin: 10px 0;
+    padding: 0 0 0 10px;
+    text-decoration: none;
+}
+.drop .drop-link:hover{
+    color: #f8f8f8;
+    text-decoration: none;
+}
+#aciklamalar:checked ~ .link.one{
+    background-color: var(--first-color);
+}
+#aciklamalar:checked ~ .drop.one{
+    display: block;
+}
+#ayarlar:checked ~ .drop.two{
+    display: block;
+}
+#ayarlar:checked ~ .link.two{
+    background-color: var(--first-color);
+}
+#side:checked ~ .sidebar{
+    width: 65px;
+    display: inline-block;
+}
+#side:checked ~ .sidebar .check ion-icon{
+    transform: rotate(0deg);
+    transition: all .5s;
+}
+#side:checked ~ .sidebar .link:hover{
+    background-color: transparent;
+}
+#side:checked ~ .sidebar ion-icon:hover{
+    transition: all .3s;
+    background-color: var(--first-color);
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  margin-top: 10rem;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding-left: 2.1cm;
+}
+
+.textbox {
+  width: 51%;
+  height: 30px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.textbox:focus {
+  border: 2px solid #555;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 55px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 0.7cm;
+  margin-left: 2.4cm;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+
+.date {
+    width: 64%;
+    height: 30px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+
+#one {
+
+
+    padding-left: 1.7cm;
+}

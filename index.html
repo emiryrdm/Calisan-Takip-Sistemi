@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <link rel="stylesheet" type="text/css" href="styles/popup.css">
+  </head>
+  <body>
+    
+      <button class="button" data-modal="modalOne">Contact Us</button>
+    
+    
+      <button class="button" data-modal="modalTwo">Send a Compliant Form</button>
+    
+    <div id="modalOne" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+          <textarea></textarea>
+        </div>
+      </div>
+    </div>
+    <div id="modalTwo" class="modal">
+      <div class="modal-content">
+        
+          <span class="close">&times;</span>
+          <form action="/">
+            <h2>Complaint form</h2>
+            <div>
+            	<span>Name</span>
+              <input class="fname" type="text" name="name" placeholder="Full name" />
+              <input type="text" name="name" placeholder="Email" />
+              <input type="text" name="name" placeholder="Phone number" />
+              <input type="text" name="name" placeholder="Website" />
+            </div>
+            <span>Message</span>
+            <div>
+              <textarea rows="4"></textarea>
+            </div>
+            <button type="submit" href="/">Submit</button>
+          </form>
+       
+      </div>
+    </div>
+    <script>
+      let modalBtns = [...document.querySelectorAll(".button")];
+      modalBtns.forEach(function (btn) {
+        btn.onclick = function () {
+          let modal = btn.getAttribute("data-modal");
+          document.getElementById(modal).style.display = "block";
+        };
+      });
+      let closeBtns = [...document.querySelectorAll(".close")];
+      closeBtns.forEach(function (btn) {
+        btn.onclick = function () {
+          let modal = btn.closest(".modal");
+          modal.style.display = "none";
+        };
+      });
+      window.onclick = function (event) {
+        if (event.target.className === "modal") {
+          event.target.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
